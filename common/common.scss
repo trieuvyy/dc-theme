@@ -199,6 +199,26 @@ tbody {
     font-size: 0.9em;
     font-weight: 500;
 }
+.badge-category-bg {
+    border-radius: 8px !important;
+    height: 8px !important;
+    margin-right: 8px !important;
+    width: 8px !important;
+}
+.topic-list .topic-list-item .link-bottom-line {
+    font-weight: normal;
+    font-size: 1em;
+    line-height: 1.125em;
+    margin-top: 8px;
+}
+
+.topic-list .topic-list-item .link-top-line a {
+    color: var(--community-blue);
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.375em;
+    padding: 0 0;
+}
 
 /* topic map */
 .topic-map section.map li {
