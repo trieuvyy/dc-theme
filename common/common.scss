@@ -158,6 +158,11 @@
 tbody {
     border-top: 0px;
 }
+.nav-pills>li>a, .nav-pills>li button {
+    border-radius: 50px;
+    font-size: 0.9em;
+    font-weight: 500;
+}
 
 /* topic map */
 .topic-map section.map li {
@@ -253,4 +258,29 @@ tbody {
 }
 .topic-map .avatars, .topic-map .links, .topic-map .information {
     padding: 0px 16px 16px 16px;
+}
+
+/* Post - author */
+.topic-body:before {
+    background-color: var(--surface-high-contrast);
+    content: "";
+    display: block;
+    position: absolute;
+    top: 64px;
+    left: -26px;
+    height: calc(100% - 72px);
+    width: 2px;
+}
+.topic-post:first-of-type .topic-body:before {
+    height: calc(100% - 72px);
+}
+
+.topic-body .topic-meta-data, .topic-body .cooked {
+    color: var(--fg-medium-contrast);
+    line-height: 1.65em;
+    padding: 0px 0px 0px 20px;
+}
+.topic-body .topic-meta-data {
+    align-self: center;
+    height: 40px;
 }
