@@ -158,3 +158,99 @@
 tbody {
     border-top: 0px;
 }
+
+/* topic map */
+.topic-map section.map li {
+    display: inline-grid;
+    grid-auto-flow: row;
+}
+.topic-map section.map li h4 {
+    color: var(--fg-medium-contrast);
+    font-family: "Inter",sans-serif;
+    font-size: 0.8125em;
+    grid-row: 1;
+    margin: 0 0;
+    margin-top: 4px;
+    padding: 0 0;
+    padding-bottom: 2px;
+    position: relative;
+    text-transform: capitalize;
+}
+
+.topic-map section.map .topic-map-post {
+    align-items: center;
+    display: inline-flex;
+    margin-top: 0;
+}
+.topic-map section.map li .trigger-user-card {
+    margin-right: 4px;
+}
+.topic-map section.map li div, .topic-map section.map li span {
+    font-weight: 500;
+    grid-row: 2;
+    justify-self: left;
+}
+.topic-map section.map li.last-reply:after {
+    background-color: var(--surface-high-contrast);
+    content: "";
+    display: inline-block;
+    grid-column: 2;
+    height: 40px;
+    margin-top: 2px;
+    margin-left: 32px;
+    margin-right: 4px;
+    width: 1px;
+}
+
+.topic-map section.map .number {
+    color: var(--fg-high-contrast);
+    font-size: 1.125em;
+    margin-top: 2px;
+}
+
+.topic-map section.map li.avatars {
+    display: none;
+}
+
+.topic-map {
+    background-color: transparent;
+    border: 1px solid var(--surface-high-contrast);
+    border-radius: 6px;
+    margin: 8px 0 8px 20px;
+    max-width: 82vw;
+}
+
+.topic-map section.map {
+    border: 0;
+    border-radius: 6px;
+    padding: 8px;
+}
+
+.topic-map .buttons {
+    align-items: center;
+    display: inline-flex;
+    padding-right: 8px;
+}
+.topic-map .buttons .btn {
+    background: transparent;
+    border-top: 0;
+    border-left: 0;
+    height: 40px;
+    padding: 4px;
+    width: 40px;
+}
+.topic-map section.map:first-of-type .buttons .btn {
+    height: 40px;
+}
+.topic-map .buttons .btn .fa {
+    font-size: 16px;
+    margin: 0px auto;
+}
+
+.topic-map section {
+    border-top: 0;
+    padding: 0px;
+}
+.topic-map .avatars, .topic-map .links, .topic-map .information {
+    padding: 0px 16px 16px 16px;
+}
