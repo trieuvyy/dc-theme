@@ -1,1 +1,80 @@
+.d-header {
+    border-bottom: 1px solid #d6d6d6;
+    box-shadow: none;
+    height: 72px;
+}
 
+.d-header-icons .icon {
+    float: none;
+    width: 32px;
+    height: 32px;
+    vertical-align: middle;
+    border-top: 0 !important;
+    border-left: 0 !important;
+    border-right: 0 !important;
+}
+.d-header-icons {
+    display: inline-flex;
+    grid-column: 1;
+}
+.d-header-icons .d-icon {
+    color: #333;
+    font-size: 16px;
+}
+.d-header .header-buttons {
+    grid-column: 2;
+    margin-top: 0;
+}
+
+.d-header .panel {
+    height: 40px;
+    align-items: end;
+    display: inline-grid;
+    grid-auto-flow: column;
+}
+
+.d-header-icons li {
+    float: none;
+    display: block;
+    width: 40px;
+    height: 40px;
+    padding: 0 8px;
+}
+
+.category-breadcrumb>*, .category-breadcrumb>li {
+    align-self: center;
+    background-color: transparent;
+    border: 1px solid;
+    border-color: rgba(0,0,0,0.3) !important;
+    border-radius: 32px;
+    display: flex;
+    flex-shrink: 0;
+    margin-bottom: 0 !important;
+    margin-right: 0 !important;
+    overflow: visible;
+    padding: 7px 16px;
+}
+.navigation-container .category-breadcrumb li {
+    margin-bottom: 0.5em;
+}
+.list-controls ol {
+    display: inline-flex;
+    flex-wrap: wrap;
+    float: none;
+    gap: 8px;
+}
+.navigation-container .category-breadcrumb {
+    align-self: center;
+    grid-area: navigation;
+    grid-row: 1;
+}
+.list-controls .combo-box .combo-box-header {
+    background: transparent;
+    border: 0 !important;
+    color: inherit;
+    font-weight: normal;
+    font-size: 0.875em;
+    line-height: 1.2em;
+    letter-spacing: 0.03em;
+    padding: 0;
+}
