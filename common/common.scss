@@ -148,7 +148,7 @@ input[type]:focus,
 }
 
 .popup-menu {
-  @include hud-shadow();
+
   left: 0;
   padding: 8px 0px;
   width: unset; // At some point Discourse made this 14em. It pushes text to another line
@@ -721,13 +721,13 @@ tr {
         font-size: 12px;
         &.new-topic {
           &:before {
-            @include dot($tertiary, 8px);
+
           }
         }
       }
       a.unread,
       a.new-posts {
-        @include dot(var(--red), 8px);
+
         color: white;
         text-indent: 100%;
         white-space: nowrap;
@@ -1421,7 +1421,7 @@ div.poll {
   opacity: 1;
   background-color: transparent;
   .btn-icon-text {
-    @include text-button-small();
+
     &:hover,
     &.btn-hover {
       background-color: var(--bold-bg);
@@ -1654,7 +1654,7 @@ div.poll {
       }
     }
     .timeline-handle {
-      @include dot(var(--fg-high-contrast), 12px);
+
       float: left;
       margin-left: -3px;
     }
@@ -2217,7 +2217,7 @@ aside.onebox {
         font-weight: 500;
       }
       &:before {
-        @include dot(var(--red), 8px);
+
         border: 1px solid var(--bold-fg);
         content: "";
         left: -12px;
@@ -2459,7 +2459,7 @@ Badges
 
 /* Selected posts modal */
 .selected-posts {
-  @include border-with-shadow(2px);
+
   background-color: var(--modal-bg);
   color: var(--modal-fg);
 }
