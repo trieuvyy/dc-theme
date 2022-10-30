@@ -133,3 +133,28 @@
     line-height: 1.375em;
     padding: 14px 16px;
 }
+.topic-list th:first-of-type, .topic-list td:first-of-type {
+    padding-left: 0;
+}
+.topic-list thead th:first-of-type {
+    border-bottom-left-radius: 8px;
+    border-top-left-radius: 8px;
+    border-left: 1px solid #D6D7DA;
+    cursor: default;
+    padding-left: 16px;
+}
+.topic-list thead th:last-of-type {
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 8px;
+    border-right: 1px solid #D6D7DA;
+    padding-right: 28px;
+}
+
+
+.topic-list thead tr {
+    border-bottom: 0px;
+    border-radius: 8px;
+}
+tbody {
+    border-top: 0px;
+}
