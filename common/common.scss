@@ -340,3 +340,36 @@ tbody {
     align-self: center;
     height: 40px;
 }
+/* post - button edit */
+nav.post-controls .actions {
+    align-items: center;
+    display: inline-flex;
+    flex-direction: row-reverse;
+    float: none;
+    margin-left: unset;
+    text-align: left;
+}
+
+/* post end - button */
+.btn-icon-text {
+    align-items: center;
+    background-color: var(--surface-low-contrast);
+    border-radius: 8px;
+    display: inline-flex !important;
+    font-size: 0.8125em;
+    font-weight: 500;
+    min-width: 30px;
+    padding: 0 0;
+    text-transform: capitalize;
+    align-items: center;
+    display: inline-flex;
+    height: 32px;
+    padding: 4px 8px;
+}
+
+.btn .d-icon {
+    color: inherit;
+    font-size: 16px;
+    margin-right: 6px;
+    transition: none;
+}
