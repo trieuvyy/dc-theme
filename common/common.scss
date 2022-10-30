@@ -12,3 +12,45 @@
   font-size: 8em;
   color: var(--secondary);
 }
+
+/* Reorganization */
+  .category-breadcrumb {
+    align-self: center;
+    grid-area: navigation;
+    grid-row: 1;
+    li {
+      margin-bottom: 0.5em;
+    }
+  }
+  #navigation-bar {
+    display: flex;
+    grid-area: navigation;
+    grid-column: -1/1; 
+    grid-row: 2;
+    margin: 0 0; /* Discourse will add --nav-space margin otherwise */
+  }
+  .navigation-controls {
+    align-items: center;
+    display: flex;
+    flex-wrap: nowrap;
+    grid-area: buttons;
+    grid-row: 1;
+    margin-bottom: 0;
+    z-index: 1; /* This forces the button to be clickable in most situations */
+    .btn {
+      background-color: transparent;
+      color: var(--fg-medium-contrast);
+      &:active, &:hover, &:focus {
+        color: var(--fg-high-contrast);
+        .d-icon {
+          color: inherit;
+        }
+      }
+      &.edit-category {
+        .d-button-label {
+          display: none;
+        }
+      }
+    }
+  }
+}
