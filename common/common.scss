@@ -122,7 +122,7 @@
     margin: 0 0;
 }
 
-/* Topic  homepage */
+/* Topic list  homepage */
 .topic-list thead th {
     background-color: #f5f5f5;
     border-top: 1px solid #D6D7DA;
@@ -149,7 +149,43 @@
     border-right: 1px solid #D6D7DA;
     padding-right: 28px;
 }
+.link-top-line {
+	align-items: baseline;
+	display: flex;
+	max-width: 660px;
+}
 
+.link-top-line a {
+	color: var(--community-blue);
+	font-size: 1em;
+	font-weight: 400;
+	line-height: 1.375em;
+	padding: 0 0;
+}
+
+.link-top-line a.title {
+	height: 1.375em;
+	max-width: 88%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.link-top-line a.title:hover {
+	position: relative;
+	text-decoration: underline;
+	text-decoration-color: currentColor;
+	text-decoration-thickness: 2px;
+	text-underline-offset: 2px;
+}
+
+.link-top-line a.title:visited {
+	color: var(--fg-medium-contrast);
+}
+
+.link-top-line a.title:visited:hover {
+	text-decoration-color: currentColor;
+}
 
 .topic-list thead tr {
     border-bottom: 0px;
