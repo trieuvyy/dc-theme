@@ -78,3 +78,25 @@
     letter-spacing: 0.03em;
     padding: 0;
 }
+/* body filter */
+.navigation-container {
+    --nav-space: 0;
+}
+.navigation-container {
+    align-items: flex-start;
+    display: grid;
+    row-gap: 24px;
+    grid-template-columns: 1fr min-content;
+    grid-template-rows: 1fr min-content;
+    grid-template-areas:
+        "navigation buttons"
+        "navigation buttons"
+        "navigation buttons";
+}
+.navigation-container #navigation-bar {
+    display: flex;
+    grid-area: navigation;
+    grid-column: -1/1;
+    grid-row: 2;
+    margin: 0 0;
+}
