@@ -1,3 +1,24 @@
+:root {
+    --blue-tint: #699bf7;
+    --coral: #ff8577;
+    --golden-yellow: #ffc700;
+    --green: #0fa958;
+    --community-blue: #236DF6;
+    --violet: #a259ff;
+    --violet-tint: #c7b9ff;
+    --violet-alert: rgba(39,109,246,0.1);
+    --red: #f24e1e;
+    --bg: #ffffff;
+    --fg-high-contrast: #000000;
+    --fg-medium-contrast: #333333;
+    --fg-low-contrast: #5d5d5d;
+    --bold-bg: #222222;
+    --bold-fg: #ffffff;
+    --modal-bg: #ffffff;
+    --modal-fg: #333333;
+    --surface-high-contrast: #d6d6d6;
+    --surface-low-contrast: #f5f5f5;
+}
 .d-header {
     border-bottom: 1px solid #d6d6d6;
     box-shadow: none;
@@ -99,4 +120,16 @@
     grid-column: -1/1;
     grid-row: 2;
     margin: 0 0;
+}
+
+/* Topic  homepage */
+.topic-list thead th {
+    background-color: #f5f5f5;
+    border-top: 1px solid #D6D7DA;
+    border-bottom: 1px solid #D6D7DA;
+    color: var(--fg-high-contrast);
+    font-size: 0.875em;
+    font-weight: 500;
+    line-height: 1.375em;
+    padding: 14px 16px;
 }
