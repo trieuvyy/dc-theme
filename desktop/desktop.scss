@@ -1,0 +1,34 @@
+/* welcome banner */
+.above-main-container-outlet.welcome-link-banner-connectors .welcome-wrapper .featured-banner-link, .below-site-header-outlet.welcome-link-banner-connector .welcome-wrapper .featured-banner-link {
+    display: none;
+}
+.above-main-container-outlet.welcome-link-banner-connectors .welcome-wrapper h2,
+.below-site-header-outlet.welcome-link-banner-connector .welcome-wrapper h2,
+.above-main-container-outlet.welcome-link-banner-connectors .welcome-wrapper .welcome-content p,
+.below-site-header-outlet.welcome-link-banner-connector .welcome-wrapper .welcome-content p {
+    color: black !important;
+    cursor: default;
+    font-family: "Inter",sans-serif;
+    text-align: left;
+}
+.above-main-container-outlet.welcome-link-banner-connectors .welcome-wrapper, .below-site-header-outlet.welcome-link-banner-connector .welcome-wrapper {
+    display: contents;
+}
+.above-main-container-outlet.welcome-link-banner-connectors .welcome-wrapper h2, .below-site-header-outlet.welcome-link-banner-connector .welcome-wrapper h2 {
+    font-size: 2.5em;
+    font-weight: 600;
+    line-height: 1em;
+    margin-bottom: 0.4em;
+}
+
+.above-main-container-outlet.welcome-link-banner-connectors .welcome-wrapper .welcome-content, .below-site-header-outlet.welcome-link-banner-connector .welcome-wrapper .welcome-content {
+    max-width: 1000px;
+    padding: 4.5em 0 4.5em 1em;
+}
+
+.above-main-container-outlet.welcome-link-banner-connectors .welcome-wrapper .welcome-content p, .below-site-header-outlet.welcome-link-banner-connector .welcome-wrapper .welcome-content p {
+    font-size: 1em;
+    font-weight: 500;
+    
+}
+
