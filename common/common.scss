@@ -584,29 +584,6 @@ nav.post-controls .actions button.no-text .d-icon {
 }
 
 
-.menu-panel {
-    background-color: var(--modal-bg);
-    border: 0.5px solid rgba(0,0,0,0.1);
-    box-shadow: 0px 2px 7px rgb(0 0 0 / 15%), 0px 5px 17px rgb(0 0 0 / 20%);
-    border-radius: 2px;
-    color: var(--modal-fg);
-    padding: 8px 0px;
-}
-.menu-panel ul {
-    padding: 0px 0px;
-}
-.menu-panel hr {
-    border-top: 1px solid var(--surface-high-contrast);
-}
-
-.menu-links.columned li {
-    display: block;
-    float: none;
-    width: unset;
-}
-.hamburger-panel .menu-panel li {
-    padding: 0px 24px 0px 48px;
-}
 
 .hamburger-panel .menu-panel li:hover {
         background-color: var(--community-blue);
