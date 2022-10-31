@@ -373,3 +373,82 @@ nav.post-controls .actions {
     margin-right: 6px;
     transition: none;
 }
+.btn-primary {
+    align-items: center;
+    background-color: var(--bold-bg);
+    border-width: 2px;
+    border-style: solid;
+    box-sizing: border-box;
+    border-radius: 6px;
+    color: var(--bold-fg);
+    display: inline-flex;
+    font-weight: 600;
+    font-size: 0.875em;
+    height: 30px;
+    line-height: 1;
+    border-color: var(--bold-bg);
+}
+
+#topic-footer-buttons .btn-primary {
+    order: 1;
+}
+#topic-footer-buttons .topic-admin-menu-button-container {
+    order: 2;
+}
+#topic-footer-buttons .share-and-invite {
+    order: 3;
+}
+#topic-footer-buttons .bookmark {
+    order: 4;
+}
+#topic-footer-buttons .flag-topic {
+    order: 5;
+}
+
+/* new post - button  */
+.navigation-container #create-topic {
+    background-color: var(--community-blue);
+    border-radius: 32px;
+    color: var(--bold-fg);
+    font-size: 0.875em !important;
+    font-weight: 500;
+    height: 32px;
+    line-height: 1.2em;
+    order: 5;
+    padding: 7px 16px;
+}
+
+.navigation-container #create-topic svg {
+    font-size: 12px;
+}
+
+/* post button */
+nav.post-controls .actions .double-button {
+    align-items: center;
+    margin-left: 8px;
+    margin-right: 0;
+    min-width: 30px;
+    order: 46;
+    padding: revert;
+}
+
+nav.post-controls .actions button.show-more-actions {
+    order: -1;
+}
+nav.post-controls .actions button.create {
+    margin-left: 0;
+    order: 48;
+    transition: all ease-out 0.2s;
+}
+nav.post-controls .actions button .d-button-label {
+    display: none;
+}
+nav.post-controls .actions button.create .d-icon {
+    color: var(--fg-low-contrast);
+    font-size: 16px;
+    transition: color ease-out 0.2s;
+}
+nav.post-controls .actions button.no-text .d-icon {
+    color: var(--fg-low-contrast);
+    transition: color ease-out 0.2s;
+}
