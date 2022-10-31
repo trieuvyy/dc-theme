@@ -452,3 +452,24 @@ nav.post-controls .actions button.no-text .d-icon {
     color: var(--fg-low-contrast);
     transition: color ease-out 0.2s;
 }
+/* post topic - post */
+.topic-body, .topic-avatar {
+    border-top: 0;
+    padding-top: 12px;
+}
+.topic-body {
+    width: min(722px, 100%);
+}
+
+/* post - timeline */
+.timeline-container .topic-timeline .timeline-handle {
+    background-color: var(--fg-high-contrast);
+    border-radius: 50%;
+    height: 12px;
+    width: 12px;
+    float: left;
+    margin-left: -3px;
+}
+.timeline-container .topic-timeline .timeline-scrollarea {
+    border-left: 2px solid var(--surface-high-contrast);
+}
