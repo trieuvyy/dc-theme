@@ -94,6 +94,26 @@
 .navigation-container .category-breadcrumb li {
     margin-bottom: 0.5em;
 }
+.category-breadcrumb>*:hover,
+.category-breadcrumb>*.is-expanded,
+.category-breadcrumb>li:hover,
+.category-breadcrumb>li.is-expanded {
+    border: 2px solid !important;
+    border-color: var(--community-blue)!important;
+    padding: 5px 15px
+}
+
+.select-kit .select-kit-header .select-kit-header-wrapper {
+    color: var(--fg-high-contrast);
+}
+.category-breadcrumb .select-kit .select-kit-header-wrapper, .category-breadcrumb .select-kit-header .select-kit-header-wrapper {
+    min-height: 18px !important;
+}
+
+.select-kit.single-select.is-expanded .select-kit-header:not(.btn), .select-kit.single-select .select-kit-header:not(.btn):focus, .select-kit.single-select .select-kit-header:not(.btn):active {
+    outline: none !important;
+    border-color: var(--surface-high-contrast) !important;
+}
 .list-controls ol {
     display: inline-flex;
     flex-wrap: wrap;
