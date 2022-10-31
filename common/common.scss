@@ -65,7 +65,7 @@
 
 .d-header .panel {
     height: 40px;
-    align-items: end;
+    align-items: center;
     display: inline-grid;
     grid-auto-flow: column;
 }
@@ -367,6 +367,11 @@ nav.post-controls .actions {
 }
 
 /* post end - button */
+#topic-footer-buttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
 .btn-icon-text {
     align-items: center;
     background-color: var(--surface-low-contrast);
