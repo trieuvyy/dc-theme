@@ -702,6 +702,10 @@ div[class^="category-title-header"] .category-title-contents .category-title {
     font-size: 2.5em;
     font-weight: 600;
 }
+section.category-heading {
+    content: none;
+    display: none;
+}
 /* inbox */
 .archetype-private_message .topic-body .cooked {
     border: none;
