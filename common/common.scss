@@ -638,3 +638,36 @@ a.widget-link:focus,
     border-radius: 8px;
     padding: 16px 24px;
 }
+
+/* categories */
+/** header **/
+.category-title-header {
+    align-items: center;
+    color: black !important;
+    height: 200px;
+    justify-content: left !important;
+    max-height: 200px !important;
+    text-align: left !important;
+}
+.category-title-header .category-title-contents {
+    margin: 0px auto;
+    max-width: 1090px !important;
+    padding: unset !important;
+    width: 90vw !important;
+}
+
+div[class^="category-title-header"] .category-title-contents .category-title {
+    display: inline;
+}
+.category-title-header .category-title-contents .category-title-description {
+    cursor: default;
+    font-family: "Inter",sans-serif;
+    font-size: 1em;
+    font-weight: 500;
+}
+.category-title-header .category-title-contents h1 {
+    cursor: default;
+    font-family: "Inter",sans-serif;
+    font-size: 2.5em;
+    font-weight: 600;
+}
