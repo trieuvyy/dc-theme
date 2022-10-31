@@ -426,6 +426,23 @@ nav.post-controls .actions {
     order: 5;
 }
 
+.discourse-no-touch .btn:hover,
+.discourse-no-touch .btn.btn-hover {
+    background-color: var(--surface-high-contrast);
+    color: var(--fg-high-contrast)
+}
+.discourse-no-touch .btn:hover .d-icon,
+.discourse-no-touch .btn.btn-hover .d-icon {
+    
+    color: inherit
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #000000!important;
+    color: white!important
+}
+
 /* new post - button  */
 .navigation-container #create-topic {
     background-color: var(--community-blue);
@@ -670,4 +687,11 @@ div[class^="category-title-header"] .category-title-contents .category-title {
     font-family: "Inter",sans-serif;
     font-size: 2.5em;
     font-weight: 600;
+}
+/* inbox */
+.archetype-private_message .topic-body .cooked {
+    border: none;
+    margin-top: revert;
+    margin-left: revert;
+    padding: 0px 0px 0px 20px;
 }
