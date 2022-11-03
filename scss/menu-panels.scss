@@ -70,15 +70,12 @@ items trigger a dropdown */
       width: 100%;
       &:hover {
         background-color: var(--community-blue);
-        a,
-        .badge-category,
-        .category-name,
-        .badge-notification {
+        a, .badge-category, .category-name, .badge-notification {
           color: white !important;
         }
       }
       // We want to see the first three categories + the categories links
-      &:nth-of-type(n + 5) {
+      &:nth-of-type(n+5) {
         display: none;
       }
       a {
@@ -90,7 +87,7 @@ items trigger a dropdown */
       }
       .badge-category-bg {
         margin-left: -24px;
-        margin-right: 16px !important;
+        margin-right: 16px !important; 
       }
       .badge-notification {
         width: unset;
@@ -104,14 +101,14 @@ items trigger a dropdown */
     padding: 0px 0px;
   }
   .panel-body-bottom {
+    padding:0px 8px;
     .btn {
       background-color: unset;
+      max-height: 30px;
     }
   }
-  .widget-link,
-  .categories-link {
-    &:hover,
-    &:focus {
+  .widget-link, .categories-link {
+    &:hover, &:focus {
       background-color: transparent;
     }
   }
@@ -139,8 +136,10 @@ items trigger a dropdown */
       padding: 0px 24px 0px 48px;
       &:hover {
         background-color: var(--community-blue);
-        .d-icon,
-        .d-label {
+        a {
+          color: white !important;
+        }
+        .d-icon, .d-label {
           color: white !important;
         }
       }
@@ -176,6 +175,9 @@ items trigger a dropdown */
     padding: 8px 8px;
     height: revert;
     width: 100%;
+    &::placeholder {
+      color: var(--fg-medium-contrast);
+    }
   }
   .menu-panel {
     /* This specialized padding is "fixed" by .results on the
@@ -193,11 +195,29 @@ items trigger a dropdown */
       text-decoration: underline;
       text-transform: capitalize;
     }
+    & + .results {
+      margin-top: 0;
+    }
   }
   .search-input {
     margin-bottom: 16px;
     padding: 0 0;
     order: 2;
+  }
+  .searching {
+    top: 8px !important;
+    right: 8px !important;
+    // these are icons displayed in the right corner of the search bar
+    a.show-advanced-search, a.clear-search { 
+      .d-icon {
+        color: var(--fg-low-contrast);
+      }
+      &:hover {
+        .d-icon {
+          color: var(--fg-high-contrast);
+        }
+      }
+    }
   }
   .results {
     margin-top: 0;
@@ -205,6 +225,16 @@ items trigger a dropdown */
     padding-bottom: 10px;
     .search-result-topic {
       width: 100%;
+    }
+    .main-results + .secondary-results {
+      border-left: 1px solid var(--surface-high-contrast);
+      margin-left: 1em;
+      margin-right: 1em;
+      padding-left: 1em;
+      padding-right: 1em;
+    }
+    .extra-hint {
+      color: var(--fg-low-contrast);
     }
   }
   /* Positions the spinner correctly in the middle */
@@ -224,8 +254,7 @@ items trigger a dropdown */
       .active {
         border-bottom: 0;
       }
-      &:hover.active,
-      &:focus.active {
+      &:hover.active, &:focus.active {
         background-color: transparent;
       }
     }
@@ -274,9 +303,7 @@ items trigger a dropdown */
         background-color: var(--community-blue) !important;
         color: white !important;
         cursor: pointer;
-        a,
-        span,
-        .d-icon {
+        a, span, .d-icon {
           color: white !important;
         }
       }
@@ -291,8 +318,7 @@ items trigger a dropdown */
       button {
         all: unset;
       }
-      a,
-      button {
+      a, button {
         color: var(--fg-high-contrast);
         column-gap: 8px;
         display: inline-grid !important;
@@ -383,9 +409,8 @@ items trigger a dropdown */
     padding: 5px 24px;
     text-transform: none;
     transition: color 0s;
-    width: 100%;
-    &:hover,
-    &:focus {
+    width: 100%; 
+    &:hover, &:focus {
       background-color: var(--community-blue);
       color: var(--bold-fg);
     }
