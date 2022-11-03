@@ -1,4 +1,5 @@
 $font-stack: "Inter",sans-serif;
+$tertiary: #236df6 !default
 :root {
     --community-blue: #0d9ef3;
 	
@@ -243,9 +244,307 @@ $font-stack: "Inter",sans-serif;
 }
 
 
+/* Tags */
+.discourse-tags > *{
+  align-items: center;
+  background-color: transparent;        
+  color: var(--fg-medium-contrast);
+  font-size: 0.875em;
+  margin-right: 0.5em;
+  &:not(.list-vote-count) {
+    background-color: transparent;
+    border: 1px solid var(--surface-high-contrast);
+    border-radius: 2px;
+    padding: 2px 8px;
+  }
+}
+
+/* !!! Topic list !!! */
+
+/* Category page */
+section.category-heading {
+  /* This is the default Category heading in Discourse */
+  content: none;
+  display: none;
+}
+
+/* Column sorting */
+
+/* List view */
+
+tbody {
+  // border-top: 3px solid var(--surface-high-contrast);
+  border-top: 0px;
+}
+
+tr {
+  border-bottom: 0;
+}
+
+.topic-list {
+  border-collapse: separate;
+  thead {
+    th {
+      background-color: var(--surface-low-contrast);
+      border-top: 1px solid #D6D7DA;
+      border-bottom: 1px solid #D6D7DA;
+      color: var(--fg-high-contrast);
+      font-size: 0.875em;
+      font-weight: 500;
+      line-height: 1.375em;
+      padding: 14px 16px;
+      /* position: sticky;
+      top: 96px;
+      z-index: 1; */
+      &:first-of-type {
+        border-bottom-left-radius: 8px;
+        border-top-left-radius: 8px;
+        border-left: 1px solid #D6D7DA;
+        cursor: default; // This prevents the "Topic" column from getting text selected
+        padding-left: 16px;
+      }
+      &:last-of-type {
+        border-bottom-right-radius: 8px;
+        border-top-right-radius: 8px;
+        border-right: 1px solid #D6D7DA;
+        padding-right: 28px;
+      }
+      .d-icon {
+        font-size: 16px; // Icon
+        vertical-align: middle;
+      }
+    }
+    tr { 
+      border-bottom: 0px; // This is added by Discourse
+      border-radius: 8px;
+    }
+    button.bulk-select {
+      margin-right: 5px;
+    }
+    .sortable:hover {
+      background-color: var(--surface-low-contrast);
+      color: var(--fg-high-contrast);
+    }
+    // Tables are messy, this adds spacing between thead and tbody
+    &:after {
+      content: '';
+      display: block;
+      height: 16px;
+    }
+  }
+  th,
+  td {
+    padding: 16px 0;
+    &:first-of-type {
+      padding-left: 0;
+    }
+    .bulk-select {
+      padding: 0 0;
+      vertical-align: text-bottom;
+    }
+  }
+  .heatmap-high {
+    a, .d-icon, .d-button-label {
+      font-weight: normal;
+      color: inherit !important; 
+    }
+    font-weight: normal;
+    color: inherit !important; 
+  }
+  .num {
+    color: var(--fg-low-contrast);
+    .badge-posts {
+      color: var(--fg-low-contrast);
+      font-weight: normal;
+    }
+  }
+  .posters {
+    overflow: hidden;
+    white-space: nowrap;
+    a {
+      float: unset;
+      &:first-child {
+        .avatar.latest:not(.single) {
+          // Theme latest poster if in a list
+          border: 2px solid var(--bold-bg);
+          box-shadow: none;
+          margin-left: 2px;
+        }
+      }
+    }
+  }
+  .main-link {
+    font-size: unset;
+    max-width: 50vw; // This helps prevent the column overtaking the entire row
+  }
+  .topic-excerpt {
+    display: block;
+    font-size: 0.875em;
+    line-height: 1.5em;
+    margin-top: 12px;
+    padding-right: 15%;
+  }
+  .topic-excerpt-more {
+    font-weight: 500;
+  }
+  .topic-list-item {
+    &.has-excerpt {
+      /*
+      background: var(--surface-low-contrast) !important;
+      border-bottom: 1px solid var(--surface-high-contrast);
+      */
+      td.main-link {
+        /*
+        padding: 24px;
+        */
+        .link-top-line {
+          a.title {
+            font-weight: 500;
+            img.emoji {
+              padding-right: 0.3ch;
+              height: 16px;
+              width: 16px;
+              vertical-align: baseline;
+            }
+          }
+        }
+        .link-bottom-line {
+          display: none;
+        }
+        /*
+        .topic-statuses {
+          display: none;
+        }
+        */
+      }
+    }
+    .link-top-line {
+      align-items: baseline;
+      display: flex;
+      max-width: 660px;
+      a {
+        color: $tertiary;
+        font-size: 1em;
+        font-weight: 400;
+        line-height: 1.375em;
+        padding: 0 0;
+      }
+      a.title {
+        height: 1.375em;
+        max-width: 88%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        &:hover {
+          position: relative;
+          text-decoration: underline;
+          text-decoration-color: currentColor;
+          text-decoration-thickness: 2px;
+          text-underline-offset: 2px;
+        }
+        &:visited {
+          color: var(--fg-medium-contrast);
+          &:hover {
+            text-decoration-color: currentColor;
+          }
+        }
+      }
+//       a.badge-notification {
+//         background-color: transparent;
+//         font-size: 12px;
+//         &.new-topic {
+//           &:before {
+//             @include dot($tertiary, 8px);
+//           }
+//         }
+//       }
+      a.unread,
+      a.new-posts {
+//         @include dot(var(--red), 8px);
+        color: white;
+        text-indent: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+      .d-icon {
+        color: var(--fg-high-contrast);
+        font-size: 18px; // Icon
+        margin-right: 2px;
+        vertical-align: middle;
+      }
+      .topic-statuses {
+        float: none;
+        margin-right: 4px;
+      }
+    }
+    .link-bottom-line {
+      font-weight: normal;
+      font-size: 1em;
+      line-height: 1.125em;
+      margin-top: 8px;
+      .badge-category-bg {
+        border-radius: 10px;
+        height: 10px;
+        margin-right: 8px;
+        width: 10px;
+      }
+      .badge-category {
+        color: var(--fg-medium-contrast);
+        .category-name {
+          color: inherit;
+          font-size: 0.875em;
+          font-weight: 400;
+        }
+      }
+    }
+    &.visited {
+      a.title:not(.badge-notification) {
+        color: var(--fg-high-contrast);
+        font-weight: 400;
+        &:hover {
+          color: var(--fg-high-contrast);
+          font-weight: 400;
+        }
+      }
+    }
+  }
+  .topic-list-item-separator {
+    .topic-list-data {
+      border-top: none;
+      span {
+        color: var(--red);
+      }
+    }
+    td {
+      border-bottom: 2px solid var(--red);
+      span {
+        color: var(--red);
+        cursor: default;
+        font-family: $font-stack;
+        font-size: 1em;
+        font-weight: 400;
+      }
+    }
+  }
+}
+.topic-list-data {
+  border-bottom: 1px solid var(--surface-low-contrast);
+}
+.topic-list-bottom {
+  h3 {
+    color: var(--fg-high-contrast);
+    font-size: 1em;
+    font-weight: 600;
+  }
+}
+
+
+
+
+
+
+
 /* nav */
-
-
 .select-kit .select-kit-header .select-kit-header-wrapper {
     color: var(--fg-high-contrast);
 }
@@ -277,32 +576,7 @@ $font-stack: "Inter",sans-serif;
 
 
 /* Topic list  homepage */
-.topic-list thead th {
-    background-color: #f5f5f5;
-    border-top: 1px solid #D6D7DA;
-    border-bottom: 1px solid #D6D7DA;
-    color: var(--fg-high-contrast);
-    font-size: 0.875em;
-    font-weight: 500;
-    line-height: 1.375em;
-    padding: 14px 16px;
-}
-.topic-list th:first-of-type, .topic-list td:first-of-type {
-    padding-left: 0;
-}
-.topic-list thead th:first-of-type {
-    border-bottom-left-radius: 8px;
-    border-top-left-radius: 8px;
-    border-left: 1px solid #D6D7DA;
-    cursor: default;
-    padding-left: 16px;
-}
-.topic-list thead th:last-of-type {
-    border-bottom-right-radius: 8px;
-    border-top-right-radius: 8px;
-    border-right: 1px solid #D6D7DA;
-    padding-right: 28px;
-}
+
 .link-top-line {
 	align-items: baseline;
 	display: flex;
@@ -341,10 +615,7 @@ $font-stack: "Inter",sans-serif;
 	text-decoration-color: currentColor;
 }
 
-.topic-list thead tr {
-    border-bottom: 0px;
-    border-radius: 8px;
-}
+
 tbody {
     border-top: 0px;
 }
@@ -359,20 +630,7 @@ tbody {
     margin-right: 8px !important;
     width: 8px !important;
 }
-.topic-list .topic-list-item .link-bottom-line {
-    font-weight: normal;
-    font-size: 1em;
-    line-height: 1.125em;
-    margin-top: 8px;
-}
 
-.topic-list .topic-list-item .link-top-line a {
-    color: var(--community-blue);
-    font-size: 1em;
-    font-weight: 400;
-    line-height: 1.375em;
-    padding: 0 0;
-}
 
 /* topic map */
 .topic-map section.map li {
@@ -824,10 +1082,6 @@ div[class^="category-title-header"] .category-title-contents .category-title {
     font-family: "Inter",sans-serif;
     font-size: 2.5em;
     font-weight: 600;
-}
-section.category-heading {
-    content: none;
-    display: none;
 }
 
 /* inbox */
