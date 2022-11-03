@@ -23,19 +23,7 @@
     --surface-low-contrast: #f5f5f5;
 }
 /* General */
-.btn {
-    align-items: center;
-    background-color: var(--surface-low-contrast);
-    border-radius: 6px;
-    display: inline-flex;
-    font-size: 0.875em;
-    font-weight: 500;
-    min-height: 30px;
-    min-width: 30px;
-    padding: 4px;
-    text-transform: capitalize;
-    transition: none;
-}
+@import "buttons";
 
 /* nav */
 .d-header {
