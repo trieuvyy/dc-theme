@@ -20,14 +20,7 @@ is shown.
     /* We decided to NOT show the title of the website at launch */
     
   }
-  #site-text-logo:before {
-    content: url($figma-icon);
-    display: block;
-    height: 42px;
-    margin-left: 8px;
-    margin-right: 30px;
-    width: 28px;
-  }
+
   #site-logo {
     height: 42px;
     margin-left: 8px;
@@ -42,9 +35,7 @@ is shown.
   .header-buttons {
     grid-column: 2;
     margin-top: 0;
-    .btn {
-      @include text-button-large();
-    }
+
     .btn:hover {
       background-color: var(--bold-bg);
       color: var(--bold-fg);
@@ -148,24 +139,12 @@ Forum" header on desktop. */
       .button-container {
         align-self: flex-end;
       }
-      .section-header {
-        padding-bottom: 0px;
-        &:after {
-          bottom: 32px;
-          content: url($banner);
-          height: 150px;
-          position: absolute;
-          right: 0;
-          width: 256px;
-          z-index: -1;
-        }
-      }
+      
     }
     .banner-subtitle,
     .banner-title {
       color: black !important;
       cursor: default;
-      font-family: $font-stack;
       margin-bottom: 0;
       text-align: left;
     }
