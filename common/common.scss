@@ -1692,7 +1692,7 @@ div.poll {
       }
     }
     .timeline-handle {
-//       @include dot(var(--fg-high-contrast), 12px);
+      @include dot(var(--fg-high-contrast), 12px);
       float: left;
       margin-left: -3px;
     }
