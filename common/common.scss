@@ -25,10 +25,26 @@ $zendesk-icon: unquote("https://europe1.discourse-cdn.com/figma/original/1X/3140
     --surface-high-contrast: #d6d6d6;
     --surface-low-contrast: #f5f5f5;
 }
-/* General */
-@import "buttons";
-@import "header";
+/* Imports */
+@import "colors";
+@import "typography";
 @import "mixins";
+
+@import "admin-settings";
+@import "buttons";
+@import "empty-state";
+@import "header";
+@import "menu-panels";
+@import "modals";
+@import "panels";
+@import "pikaday";
+@import "footer";
+@import "select-kit";
+@import "topics";
+
+@import "category-banners";
+@import "category-boxes";
+@import "search";
 
 
 /* Filter selection */
