@@ -1595,6 +1595,122 @@ div.poll {
   padding: 0 0;
 }
 
+/* Embedded link theming */
+
+aside.onebox {
+  border: 1px solid var(--surface-high-contrast);
+  border-radius: 6px;
+  background: transparent;
+  margin-bottom: 1em;
+  padding: 1em;
+  font-size: 1em;
+  header {
+    align-items: center;
+    display: flex;
+    margin-bottom: 0.5em;
+  }
+  .onebox-body {
+    display: flex;
+    flex-direction: column;
+    .aspect-image, img {
+      content: none;
+      display: none;
+      margin-right: 0;
+      order: 3;
+    }
+    h3 {
+      font-size: 1em;
+      margin: 0 0 0 0;
+      order: 1;
+    }
+    p {
+      display: block;
+      margin-bottom: 0;
+      order: 2;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: 95%;
+      white-space: nowrap;
+    }
+  }
+}
+
+/* Embedded image theming */
+
+.lightbox-wrapper {
+  .lightbox {
+    display: inline-flex;
+    flex-direction: column;
+    overflow: visible;
+    img {
+      border-radius: 0px;
+      transition: all ease-out 0.15s;
+      &:hover {
+        cursor: zoom-in;
+      }
+    }
+  }
+}
+
+.meta {
+  align-items: center;
+  background-color: transparent;
+  border-top: 1px solid var(--surface-low-contrast);
+  column-gap: 8px;
+  display: inline-grid;
+  grid-auto-flow: column;
+  grid-template-columns: 16px 1fr 1fr;
+  font-size: 0.8125em;
+  opacity: 1;
+  padding: 8px 0px 8px 0px;
+  position: relative;
+  .d-icon {
+    color: var(--fg-low-contrast);
+    font-size: 16px; // Icon
+    margin: 0;
+    opacity: 1;
+    &.d-icon-discourse-expand {
+      display: none;
+    }
+    & + .filename {
+      height: unset;
+    }
+  }
+  .filename {
+    color: var(--fg-low-contrast);
+    font-weight: 400;
+    margin: 0;
+  }
+  .informations {
+    color: var(--fg-low-contrast);
+    font-size: 0.8125em;
+    font-weight: 400;
+    margin: 0 0 0 0;
+    margin-left: auto;
+    padding-right: 0;
+    text-align: right;
+  }
+}
+
+/* Weird visual bug in suggested topics from Discourse */
+.suggested-topics {
+  .badge-wrapper {
+    &.bullet {
+      span.badge-category {
+        max-width: unset;
+      }
+    }
+  }
+  h3.suggested-topics-message {
+    font-size: 1.125em;
+  }
+}
+
+
+
+
+
+
 
 
 
