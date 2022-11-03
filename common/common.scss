@@ -26,6 +26,222 @@
 @import "buttons";
 @import "header";
 
+
+/* Filter selection */
+.navigation-container {
+  align-items: flex-start;
+  display: grid;
+  row-gap: 24px;
+  grid-template-columns: 1fr min-content;
+  grid-template-rows: 1fr min-content;
+  grid-template-areas: 
+    "navigation buttons"
+    "navigation buttons"
+    "navigation buttons";
+  // padding: 0 0 32px 0;
+  ul {
+    margin: 9px 0px;
+    min-height: 30px;
+  }
+  #create-topic {
+    background-color: var(--community-blue);
+    border-radius: 32px;
+    color: var(--bold-fg);
+    font-size: 0.875em !important;
+    font-weight: 500;
+    height: 32px;
+    line-height: 1.2em;
+    order: 5;
+    padding: 7px 16px;
+    &:hover {
+      background-color: var(--community-blue) !important;
+      color: var(--bold-fg) !important;
+    }
+    .d-icon {
+      display: none;
+    }
+    &[disabled] {
+      display: none;
+    }
+  }
+  /* Reorganization */
+  .category-breadcrumb {
+    align-self: center;
+    grid-area: navigation;
+    grid-row: 1;
+    li {
+      margin-bottom: 0.5em;
+    }
+  }
+  #navigation-bar {
+    display: flex;
+    grid-area: navigation;
+    grid-column: -1/1; 
+    grid-row: 2;
+    margin: 0 0; /* Discourse will add --nav-space margin otherwise */
+  }
+  .navigation-controls {
+    align-items: center;
+    display: flex;
+    flex-wrap: nowrap;
+    grid-area: buttons;
+    grid-row: 1;
+    margin-bottom: 0;
+    z-index: 1; /* This forces the button to be clickable in most situations */
+    .btn {
+      background-color: transparent;
+      color: var(--fg-medium-contrast);
+      &:active, &:hover, &:focus {
+        color: var(--fg-high-contrast);
+        .d-icon {
+          color: inherit;
+        }
+      }
+      &.edit-category {
+        .d-button-label {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.list-controls {
+  margin-bottom: 0;
+  ol {
+    display: inline-flex;
+    flex-wrap: wrap;
+    float: none;
+    gap: 8px;
+  }
+  .btn {
+    .d-button-label {
+      font-size: unset;
+      font-weight: unset;
+    }
+  }
+  .nav {
+    display: inline-block;
+    float: none;
+  }
+}
+
+
+.nav-pills {
+  .navigation-toggle {
+    padding: 0px 16px;
+  }
+  li {
+    padding: 0px 16px 0px 0px;
+    &:first-of-type {
+      padding-left: 0;
+    }
+    &>a {
+      font-family: $font-stack;
+      font-weight: 500;
+      font-size: 0.875em;
+      letter-spacing: 0.01em;
+      line-height: 1.25em;
+      color: var(--fg-low-contrast);
+      padding: 0 0;
+      position: relative;
+      &:hover {
+        background-color: transparent;
+        color: var(--fg-high-contrast);
+      }
+      &.active {
+        color: var(--fg-high-contrast);
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+.category-breadcrumb {
+  .select-kit-body {
+  transform:translate(0px, 32px) !important;
+  }
+  & > *, & > li {
+    align-self: center;
+    background-color: transparent;
+    border: 1px solid;
+    border-color: rgba(0, 0, 0, 0.3) !important;
+    border-radius: 32px;
+    display: flex;
+    flex-shrink: 0;
+    margin-bottom: 0 !important;
+    margin-right: 0 !important;
+    overflow: visible;
+    padding: 7px 16px;
+    div { 
+      margin-bottom: 0 !important;
+    }
+    &:hover, &.is-expanded {
+      border: 2px solid !important;
+      border-color: var(--community-blue) !important;
+      padding: 5px 15px;
+    }
+  }
+  .select-kit, .select-kit-header { 
+    .badge-wrapper {
+      .category-name, .d-icon {
+        color: var(--fg-high-contrast);
+        font-size: 1em;
+        font-weight: normal;
+      }
+      .badge-category-bg {
+        display: none;
+      }
+    }
+    .caret-icon {
+      font-size: 12px;
+      height: 12px;
+      width: 12px;
+    }
+    .select-kit-header-wrapper {
+      min-height: 18px !important;
+    }
+  }
+  .select-kit-collection {
+    .badge-wrapper {
+      .category-name, .d-icon {
+        color: var(--fg-high-contrast);
+        font-weight: 400;
+      }
+      .badge-category-bg {
+        display: inline-block !important;
+      }
+    }
+  }
+}
+
+.badge-wrapper {
+  align-items: center;
+  font-size: unset !important;
+  &.bullet {
+    margin-right: 6px;
+    vertical-align: text-bottom;
+    span.badge-category {
+      color: var(--fg-medium-contrast);
+      overflow: visible;
+    }
+    span.badge-category-parent-bg {
+      display: none;
+    }
+    .d-icon {
+      color: var(--fg-medium-contrast);
+    }
+  }
+}
+
+.footer-message {
+  .top-title-buttons {
+    display: block;
+    margin: 8px 0px 8px -4px;
+  }
+}
+
+
 /* nav */
 .category-breadcrumb>*, .category-breadcrumb>li {
     align-self: center;
