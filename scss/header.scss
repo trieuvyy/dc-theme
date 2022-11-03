@@ -101,7 +101,7 @@ Forum" header on desktop. */
         padding-bottom: 0px;
         &:after {
           bottom: 32px;
-          content: url(https://europe1.discourse-cdn.com/figma/original/2X/a/a07141646f7888df129d3a664f99728a1caa44fc.svg);
+          content: "👋";
           height: 150px;
           position: absolute;
           right: 0;
@@ -114,6 +114,7 @@ Forum" header on desktop. */
     .banner-title {
       color: black !important;
       cursor: default;
+      font-family: $font-stack;
       margin-bottom: 0;
       text-align: left;
     }
@@ -146,11 +147,13 @@ Forum" header on desktop. */
     width: 90vw !important;
     h1 {
       cursor: default;
+      font-family: $font-stack;
       font-size: 2.5em;
       font-weight: 600;
     }
     .category-title-description {
       cursor: default;
+      font-family: $font-stack;
       font-size: 1em;
       font-weight: 500;
     }
