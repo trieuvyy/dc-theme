@@ -1,9 +1,12 @@
 :root {
+    --community-blue: #0d9ef3;
+	
+	
     --blue-tint: #699bf7;
     --coral: #ff8577;
     --golden-yellow: #ffc700;
     --green: #0fa958;
-    --community-blue: #236DF6;
+
     --violet: #a259ff;
     --violet-tint: #c7b9ff;
     --violet-alert: rgba(39,109,246,0.1);
@@ -724,6 +727,9 @@ div[class^="category-title-header"] .category-title-contents .category-title {
 }
 section.category-heading {
     content: none;
+    display: none;
+}
+.badge-wrapper.bullet span.badge-category-parent-bg {
     display: none;
 }
 /* inbox */
