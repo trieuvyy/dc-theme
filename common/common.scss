@@ -45,6 +45,296 @@ $primary: #000000 !default; $secondary: #ffffff !default; $tertiary: #236df6 !de
 @import "category-boxes";
 @import "search";
 
+.navigation-container {
+  --nav-space: 0;
+}
+
+*:focus {
+  outline-color: var(--fg-high-contrast);
+  outline-width: 0px;
+}
+
+input[type="text"],
+textarea,
+div.ac-wrap input[type="text"] {
+  background-color: var(--bg);
+  border: 1px solid var(--surface-high-contrast);
+  border-radius: 2px;
+  box-shadow: none;
+  color: var(--fg-high-contrast);
+  font-size: 1em;
+  padding: 4px 8px;
+  outline: 0;
+  transition: border-color 0.15s ease-out;
+  &:hover {
+    border-color: var(--surface-high-contrast);
+    box-shadow: none;
+    outline: 0;
+  }
+  &:focus {
+    border-color: $tertiary;
+    box-shadow: none;
+    outline: 0;
+  }
+}
+
+div.ac-wrap {
+  border: none;
+}
+
+/* Layout */
+.wrap {
+  max-width: initial;
+  margin: 0 0;
+  padding: 0 0;
+  display: grid;
+  grid-template-columns:
+    1fr
+    unquote("min(90vw, 1200px)")
+    1fr !important;
+  & > * {
+    grid-column: 2 !important;
+  }
+}
+
+.container.posts > .row {
+  overflow: revert;
+}
+
+#main-outlet {
+  padding: 0 0;
+  margin-bottom: 6em;
+  margin-top: 2em;
+  max-width: unset !important;
+  width: unset !important;
+}
+
+#main-outlet-wrapper {
+  .sidebar-wrapper {
+    background-color: transparent;
+    display: none;
+  }
+}
+
+#list-area {
+  margin-bottom: 32px;
+}
+
+/* Global */
+input[type]:focus,
+.select-kit.multi-select.is-expanded .select-kit-wrapper {
+  box-shadow: none;
+  border-color: $tertiary !important;
+  outline: 0;
+}
+
+.badge-category-bg {
+  border-radius: 8px !important;
+  height: 8px !important;
+  margin-right: 8px !important;
+  width: 8px !important;
+}
+
+.badge-category-parent-bg {
+  border-radius: 2px !important;
+  height: 8px !important;
+  margin-right: 8px !important;
+  width: 8px !important;
+}
+
+.boxed.white {
+  background-color: transparent;
+}
+
+/* Bug fix for no-touch overwriting everything */
+.discourse-no-touch {
+  a.lightbox:hover {
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .btn {
+    &:hover,
+    &.btn-hover {
+      background-color: var(--surface-high-contrast);
+      color: var(--fg-high-contrast);
+      .d-icon {
+        color: inherit;
+      }
+    }
+  }
+  .embedded-posts {
+    .collapse-up,
+    .collapse-down {
+      &:hover {
+        background-color: var(--fg-high-contrast);
+        color: var(--bg);
+      }
+    }
+  }
+  .autocomplete {
+    ul {
+      li {
+        a:hover {
+          background-color: var(--violet-alert);
+        }
+      }
+    }
+  }
+}
+
+.highlighted {
+  background-color: transparent !important;
+  animation: none !important;
+}
+
+.popup-menu {
+  @include hud-shadow();
+  left: 0;
+  padding: 8px 0px;
+  width: unset; // At some point Discourse made this 14em. It pushes text to another line
+  z-index: 9999;
+  ul {
+    li {
+      border-bottom: 0px;
+      .btn {
+        padding: 0px 24px 0px 48px;
+        .d-icon {
+          align-self: center;
+          color: var(--fg-medium-contrast);
+          font-size: 12px;
+          padding: 2px;
+          margin-left: -24px;
+          margin-right: 8px;
+        }
+        &:focus {
+          outline: 0;
+          background-color: var(--surface-low-contrast);
+        }
+        &:hover {
+          background-color: var(--community-blue);
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width:1204px) {
+  .popup-menu {
+    left: -196px !important;
+  } 
+}
+
+.tap-tile-grid {
+  .tap-tile {
+    &.active {
+      background-color: var(--surface-low-contrast);
+    }
+  }
+}
+
+.alert {
+  align-items: center;
+  font-family: $font-stack;
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 140%;
+  letter-spacing: 0.03em;
+  margin-top: 0em;
+  margin-bottom: 2em;
+  
+  &.alert-info {
+    background-color: rgba(35, 109, 246, 0.1);
+    border: none;
+    border-radius: 8px;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    padding: 16px 24px;
+  }
+  &.alert-success {
+    background-color: var(--bold-bg);
+    color: var(--bold-fg);
+    a {
+      color: var(--bolg-fg);
+      text-decoration: underline;
+    }
+  }
+  &#global-notice-alert-global-notice {
+    background-color: var(--violet);
+    border: none;
+    border-radius: 8px;
+    color: var(--bold-fg);
+    display: grid;
+    font-weight: 500;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    padding: 16px 24px;
+    a {
+      color: var(--bold-fg);
+      font-weight: 500;
+      text-decoration: underline;
+      &:hover {
+        opacity: 0.85;
+      }
+    }
+  }
+  a {
+    color: var(--fg-high-contrast);
+    font-weight: 500;
+  }
+  .close {
+    color: var(--fg-medium-contrast);
+    font-size: 16px; // Icon
+    position: revert;
+    right: revert;
+    top: revert;
+    .d-icon {
+      color: inherit;
+    }
+  }
+}
+
+#banner {
+  background: transparent;
+  border: 2px solid var(--surface-high-contrast);
+  border-radius: 6px;
+  display: grid;
+  grid-template-columns: 1fr 16px;
+  grid-template-areas: "content  close-button";
+  padding: 16px 24px;
+  p {
+    &:first-of-type {
+      margin-top: 0;
+    }
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+  #banner-content {
+    align-items: start;
+    grid-area: content;
+  }
+  .close {
+    align-items: start;
+    float: unset;
+    font-size: 16px; // Icon
+    grid-area: close-button;
+    padding-left: 0;
+    position: unset;
+    right: unset;
+    top: unset;
+    .d-icon {
+      color: var(--fg-medium-contrast);
+    }
+  }
+}
+
+.show-more {
+  &.has-topics {
+    position: revert;
+  }
+}
 
 /* Filter selection */
 .navigation-container {
