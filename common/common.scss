@@ -63,6 +63,12 @@ $zendesk-icon: unquote("https://europe1.discourse-cdn.com/figma/original/1X/3140
     --surface-high-contrast: #d6d6d6;
     --surface-low-contrast: #f5f5f5;
 }
+@media (prefers-color-scheme: dark) {
+	:root {
+		--fg-medium-contrast: #ddd;
+	    	--surface-high-contrast: #303030;
+	}
+}
 /* Imports */
 @import "colors";
 @import "typography";
