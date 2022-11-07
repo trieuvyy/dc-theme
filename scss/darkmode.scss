@@ -63,10 +63,21 @@
 			.filter-input {
 				border: 1px solid #525252!important;
 			}
-			.is-expanded {
+			&.is-expanded {
 			    	border-bottom: 1px solid #525252!important;
 			}
 		}
-	} 
+	}
+	.select-kit {
+	    &.combo-box {
+	      &.category-chooser, &.category-drop, &.mini-tag-chooser, &.tag-drop, &.single-select, &.multi-select {
+		.select-kit-row {
+		  .topic-count {
+		    color: #9d9ca0!important
+		  }
+		}
+	      }
+	    }
+	  }
 	
 }
