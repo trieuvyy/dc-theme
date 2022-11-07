@@ -2,5 +2,48 @@
 	:root {
 		--fg-medium-contrast: #ddd;
 	    	--surface-high-contrast: #303030;
+		--fg-high-contrast: #fff;
+		--surface-low-contrast: #2d2d2e;
 	}
+	
+	// banner welcome
+	#main {
+		.banner-box {
+	      		.banner-subtitle,
+			.banner-title {
+				color: white !important;
+	      		}
+	    	}
+  	}
+	
+	/* Filter selection */
+	.category-breadcrumb {
+		.select-kit-body {
+		}
+		& > *, & > li {
+			border-color: rgb(255 255 255 / 30%)
+		}
+	}
+	
+	/* Column sorting */
+
+	/* List view */
+	.topic-list {
+		thead {
+			th {
+				border-top: 1px solid #464647;
+				border-bottom: 1px solid #464647;
+				&:first-of-type {
+					border-left: 1px solid #464647;
+				}
+				&:last-of-type {
+					border-right: 1px solid #464647;
+				}
+			}
+		}
+		
+	}
+
+	
+	
 }
