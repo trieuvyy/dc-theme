@@ -1,6 +1,8 @@
 @media (prefers-color-scheme: dark) {
 	:root {
+	    	--community-blue: #42b8f7;
 		--fg-medium-contrast: #ddd;
+	    	--fg-low-contrast: #c9c9c9;
 	    	--surface-high-contrast: #303030;
 		--fg-high-contrast: #fff;
 		--surface-low-contrast: #2d2d2e;
@@ -23,7 +25,7 @@
 		.select-kit-body {
 		}
 		& > *, & > li {
-			border-color: var(--filter-border);
+			border-color: var(--filter-border)!important;
 		}
 	}
 	
@@ -33,13 +35,13 @@
 	.topic-list {
 		thead {
 			th {
-				border-top: 1px solid #464647;
-				border-bottom: 1px solid #464647;
+				border-top: 1px solid #464647!important;
+				border-bottom: 1px solid #464647!important;
 				&:first-of-type {
-					border-left: 1px solid #464647;
+					border-left: 1px solid #464647!important;
 				}
 				&:last-of-type {
-					border-right: 1px solid #464647;
+					border-right: 1px solid #464647!important;
 				}
 			}
 		}
