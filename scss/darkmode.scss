@@ -7,6 +7,10 @@
 		--fg-high-contrast: #fff;
 		--surface-low-contrast: #2d2d2e;
 		
+	    	--modal-bg: #2e2e30;
+	    	--modal-fg: #ffffff;
+		--bg: #2e2e30;
+		
 		--filter-border: rgb(255 255 255 / 30%);
 	}
 	
@@ -48,6 +52,18 @@
 		
 	}
 
-	
+	/* Select kit */.select-kit.single-select .select-kit-filter.is-expanded
+	.select-kit {
+	}
+	&.single-select {
+		.select-kit-filter {
+			.filter-input {
+				border: 1px solid #525252!important;
+			}
+			.is-expanded {
+			    	border-bottom: 1px solid #525252!important;
+			}
+		}
+	} 
 	
 }
