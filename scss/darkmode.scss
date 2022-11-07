@@ -4,6 +4,8 @@
 	    	--surface-high-contrast: #303030;
 		--fg-high-contrast: #fff;
 		--surface-low-contrast: #2d2d2e;
+		
+		--filter-border: rgb(255 255 255 / 30%);
 	}
 	
 	// banner welcome
@@ -21,7 +23,7 @@
 		.select-kit-body {
 		}
 		& > *, & > li {
-			border-color: rgb(255 255 255 / 30%)
+			border-color: var(--filter-border);
 		}
 	}
 	
