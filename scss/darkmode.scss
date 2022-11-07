@@ -5,11 +5,13 @@
 	    	--fg-low-contrast: #c9c9c9;
 	    	--surface-high-contrast: #303030;
 		--fg-high-contrast: #fff;
-		--surface-low-contrast: #2d2d2e;
+		--surface-low-contrast: #3e3e41;
 		
 	    	--modal-bg: #2e2e30;
 	    	--modal-fg: #ffffff;
 		--bg: #2e2e30;
+		
+	    	--bold-bg: #404143;
 		
 		--filter-border: rgb(255 255 255 / 30%);
 	}
@@ -52,7 +54,7 @@
 		
 	}
 
-	/* Select kit */.select-kit.single-select .select-kit-filter.is-expanded
+	/* Select kit */
 	.select-kit {
 	}
 	&.single-select {
