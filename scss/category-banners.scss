@@ -17,6 +17,9 @@ This file themes the top-bars of Discourse per category.
     &.category-banner-info {
         background-color: rgba(255, 199, 0, 0.10) !important;
     }
+    &.category-banner-site-feedback {
+        background-color: rgb(128 130 129 / 16%) !important;
+    }
     &.category-banner-general {
         background-color: rgba(35, 109, 246, 0.10) !important;
         .category-title-contents {
