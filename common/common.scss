@@ -160,6 +160,9 @@ div.ac-wrap {
 
 #list-area {
   margin-bottom: 32px;
+  	.show-more {
+		position: revert;
+	}
 }
 
 /* Global */
