@@ -12,7 +12,7 @@ $love: #f24e1e !default;
 $primary-low: #f5f5f5 !default;
 $tertiary-low: #f0f0f0 !default;
 $primary-low-mid: #d6d6d6 !default;
-$primary-medium: #5d5d5d !default;
+$primary-medium: #5d5d5d !default;#list-area
 $primary-high: #333333 !default;
 $public_image_path: "https://dub2.discourse-cdn.com/figma/images";
 @import "common/foundation/variables";
@@ -162,6 +162,9 @@ div.ac-wrap {
   margin-bottom: 32px;
   	.show-more {
 		position: revert;
+		.alert {
+		    margin-bottom: 2em;
+		}
 	}
 }
 
