@@ -65,7 +65,7 @@ high for accessibility when making changes and choosing colors.
   --surface-low-contrast: #f5f5f5;
 }
 
-/* Naive dark mode implementation, preserved for future reference*/
+/* Naive dark mode implementation, preserved for future reference
   @media (prefers-color-scheme: dark) {
     :root {
       --bg: #1d1d1d;
@@ -80,7 +80,7 @@ high for accessibility when making changes and choosing colors.
       --surface-low-contrast: #262626;
     }
   }
-}
+*/
 
 
 $primary: var(--fg-high-contrast);
