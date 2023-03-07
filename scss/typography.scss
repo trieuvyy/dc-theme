@@ -3,7 +3,7 @@ Figma Community Forum
 Typography
 */
 
-/* Inter variable */
+/* Inter variable 
 @font-face {
   font-family: 'Inter';
   font-style:  normal;
@@ -79,10 +79,10 @@ Typography
   font-named-instance: 'Italic';
   src: url($Inter-Var-Italic) format("woff2");
 }
-
+*/
 /* This catches any cases in Discourse that aren't covered by the HTML
 tag below */
-$font-stack: "Inter", sans-serif;
+$font-stack: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
 :root {
   --heading-font-family: $font-stack;
