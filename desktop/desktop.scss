@@ -8,7 +8,7 @@
 .below-site-header-outlet.welcome-link-banner-connector .welcome-wrapper .welcome-content p {
     color: black !important;
     cursor: default;
-    font-family: var(--system-ui);
+    font-family: $font-stack;
     text-align: left;
 }
 .above-main-container-outlet.welcome-link-banner-connectors .welcome-wrapper, .below-site-header-outlet.welcome-link-banner-connector .welcome-wrapper {
