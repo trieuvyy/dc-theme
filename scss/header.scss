@@ -72,7 +72,7 @@ Forum" header on desktop. */
 
 #main {
   .banner-box {
-    background-color: rgba(35, 109, 246, 0.1);
+    background-color: #212121;
     display: flex;
     .button-container {
       margin-right: 0px;
@@ -101,19 +101,18 @@ Forum" header on desktop. */
       .section-header {
         padding-bottom: 0px;
         &:after {
-          bottom: 32px;
-          content: url("https://forum.betaprofiles.com/uploads/default/original/2X/d/d2f34d7713113afe2461ffb566d10f9462a63812.png");
-          height: 150px;
+          top: 0;
+          content: url("https://forum.betaprofiles.com/uploads/default/original/2X/9/9a0f84786887bd1eac09045f3a9d0f90425482ff.jpeg");
+          height: 200px;
           position: absolute;
           right: 0;
-          width: 350px;
-          z-index: -1;
+          width: 547px;
         }
       }
     }
     .banner-subtitle,
     .banner-title {
-      color: black !important;
+      color: white !important;
       cursor: default;
       font-family: $font-stack;
       margin-bottom: 0;
