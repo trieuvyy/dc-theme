@@ -106,7 +106,7 @@ making the # selector valid and extremely precise for this.
 #user-card {
   @include hud-shadow();
   overflow: hidden;
-  max-width: 480px;
+  /*max-width: 480px;*/
   .card-content {
     background-color: var(--modal-bg);
     color: var(--modal-fg);
