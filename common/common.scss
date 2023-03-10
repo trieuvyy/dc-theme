@@ -2593,3 +2593,7 @@ Badges
     }
   }
 }
+/* Hide custom filed from signup form */
+.d-modal.create-account div[class*="user-field-"] {
+    display: none;
+}
