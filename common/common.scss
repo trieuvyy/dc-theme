@@ -2597,3 +2597,7 @@ Badges
 .d-modal.create-account div[class*="user-field-"] {
     display: none;
 }
+/* Fix margin navbar from Dropdown header component */
+.custom-header-links .top-level-links {
+  margin: 0 0 0 30px;
+}
