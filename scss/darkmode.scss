@@ -125,5 +125,12 @@
 			color: var(--fg-high-contrast);
 		}
 	}
+	/* Editor */
+	.select-kit.dropdown-select-box.toolbar-popup-menu-options {
+		.select-kit-row {
+			border-color: var(--surface-high-contrast);
+		}
+	}
+
 	
 }
