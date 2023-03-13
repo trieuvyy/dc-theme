@@ -15,7 +15,6 @@
 		
 	    	--bold-bg: #404143;
 		
-		--filter-border: rgb(255 255 255 / 30%);
 		
 		--primary: #FFF;
 		--primary-medium: #8b949e;
@@ -47,7 +46,7 @@
 		.select-kit-body {
 		}
 		& > *, & > li {
-			border-color: var(--filter-border);
+			border-color: var(--surface-high-contrast) !important;
 		}
 	}
 	
