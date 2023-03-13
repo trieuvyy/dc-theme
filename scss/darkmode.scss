@@ -115,5 +115,9 @@
 		background-color: var(--bg);
     		border: 1px solid var(--surface-high-contrast);
 	}
+	/* Category */
+	.category-title-header {
+		color: var(--fg-high-contrast) !important;
+	}
 	
 }
