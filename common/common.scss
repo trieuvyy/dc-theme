@@ -86,6 +86,8 @@ $header-text: false !default;
 @import "category-boxes";
 @import "search";
 
+@import "darkmode";
+
 .navigation-container {
   --nav-space: 0;
 }
