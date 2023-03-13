@@ -121,7 +121,7 @@
 	}
 	/* Header dropdown */
 	.custom-header-links .custom-header-dropdown-link {
-		&hover {
+		&:hover {
 			color: var(--fg-high-contrast);
 		}
 	}
