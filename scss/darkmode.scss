@@ -7,7 +7,7 @@
 		--fg-high-contrast: #fff;
 		
 		--surface-high-contrast: #30363d;
-		--surface-low-contrast: #3e3e41;
+		--surface-low-contrast: #161b22;
 		
 	    	--modal-bg: #2e2e30;
 	    	--modal-fg: #ffffff;
@@ -49,13 +49,13 @@
 	.topic-list {
 		thead {
 			th {
-				border-top: 1px solid #464647!important;
-				border-bottom: 1px solid #464647!important;
+				border-top: 1px solid #30363d!important;
+				border-bottom: 1px solid #30363d!important;
 				&:first-of-type {
-					border-left: 1px solid #464647!important;
+					border-left: 1px solid #30363d!important;
 				}
 				&:last-of-type {
-					border-right: 1px solid #464647!important;
+					border-right: 1px solid #30363d!important;
 				}
 			}
 		}
