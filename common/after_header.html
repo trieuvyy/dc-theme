@@ -1,1 +1,57 @@
-<p>Test</p>
+<style>
+.wwdc23 {
+     background-color: #000;
+     color: #fff;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     border-radius: 18px;
+     padding: 1.5rem 1.5rem;
+     margin-bottom: 2rem;
+}
+.wwdc23-links a {
+     color: #01adfc;
+}
+.wwdc23-links a:last-child {
+     margin-left: 18px;
+}
+.wwdc23-wrap {
+     margin-top: 20px;
+}
+ .wwdc23-wrap img {
+     max-width: 330px;
+}
+@media (min-width: 768px) {
+   .wwdc23 {
+       flex-direction: row;
+  }
+}
+@media (min-width: 1200px) {
+   .wwdc23-text {
+       padding-left: 2rem;
+  }
+   .wwdc23-wrap img {
+       max-width: 530px;
+  }
+   .wwdc23-wrap {
+       margin-top: 0px;
+  }
+}
+</style>
+<div class="wwdc23">
+    <div class="wwdc23-text">
+        <h2>WWDC23 returns June 5, 2023</h2>
+        <p>The first developer beta of iOS 17, iPadOS 17, watchOS 10, macOS 14, and tvOS 17 will be released on June 5th.</p>
+        <div class="wwdc23-links">
+            <a href="https://forum.betaprofiles.com/t/wwdc23-is-here-ios-17-is-coming/6571/2">Learn more →</a>
+            <a href="https://developer.apple.com/wwdc23/WWDC2023.ics">Add to calendar →</a>
+        </div>
+    </div>
+    <div class="wwdc23-wrap">
+        <picture>
+            <source media="(max-width: 767px)" srcset="https://forum.betaprofiles.com/uploads/default/original/2X/9/92d8de24b9264ac13777ea08e67769ebd0685c47.jpeg 1x, https://forum.betaprofiles.com/uploads/default/original/2X/8/83458012426c60dd36c637e9b9038b037a23157e.jpeg 2x">
+            <img src="https://forum.betaprofiles.com/uploads/default/original/2X/8/83458012426c60dd36c637e9b9038b037a23157e.jpeg 2x" fetchpriority="high" alt="WWDC23 announcement" width="580">
+        </picture>
+    </div>
+
+</div>
