@@ -1,429 +1,96 @@
-/* 
-Figma Community Forum
-Menu panels
-------------------------
-
-"Menu panels" consist of any of the dropdown menus that are triggered
-from buttons in the header. These are, from left-to-right:
-
-• Search menu
-• Hamburger panel
-• User menu
-
-They have a general purpose styling, but based on need or mock-up, 
-one or two things have been individually configured for these.
-
-------------------------
-*/
-
-/* This is a class Discourse bestows upon your whole page if your menu
-items trigger a dropdown */
-.drop-down-mode {
-  .d-header-icons {
-    .active {
-      .icon {
-        background-color: transparent;
-        cursor: pointer;
-        .d-icon {
-          color: var(--fg-high-contrast);
-        }
-        &:after {
-          content: none;
-          display: none;
-        }
-      }
-    }
-  }
-}
-
 .menu-panel {
-  @include hud-shadow();
-  padding: 8px 0px;
+  &.user-menu.revamped {
+    width: unset;
+  }
 
-  /* This positions where the dropdown appears on desktop relative
-  to where ul.d-header-icons is */
-  &.drop-down {
-    right: 10px;
-    top: 48px !important;
-  }
-  b {
-    &.topics-count {
-      display: none;
-    }
-  }
-  li {
-    /* These are Latest, Unread, Top, Users, New, Review, etc */
-    a.categories-link {
-      color: var(--modal-fg) !important;
-      font-size: 0.875em;
-      font-weight: 500;
-      padding: 5px 0 !important;
-      &:hover,
-      &:focus {
-        background-color: transparent !important;
-      }
-    }
-    &.category-link {
-      color: var(--modal-fg) !important;
-      font-size: 0.875em;
-      height: 30px;
-      width: 100%;
-      &:hover {
-        background-color: var(--community-blue);
-        a, .badge-category, .category-name, .badge-notification {
-          color: white !important;
-        }
-      }
-      // We want to see the first three categories + the categories links
-      &:nth-of-type(n+5) {
-        display: none;
-      }
-      a {
-        padding: 5px 0px !important;
-        width: 100%;
-      }
-      .badge-category {
-        color: var(--modal-fg);
-      }
-      .badge-category-bg {
-        margin-left: -24px;
-        margin-right: 16px !important; 
-      }
-      .badge-notification {
-        width: unset;
-      }
-    }
-  }
-  hr {
-    border-top: 1px solid var(--surface-high-contrast);
-  }
-  ul {
-    padding: 0px 0px;
-  }
-  .panel-body-bottom {
-    padding:0px 8px;
-    .btn {
-      background-color: unset;
-      max-height: 30px;
-    }
-  }
-  .widget-link, .categories-link {
-    &:hover, &:focus {
-      background-color: transparent;
-    }
+  .panel-body {
+    max-height: calc(100vh - 100px);
   }
 }
 
-.menu-links {
-  &.columned {
-    li {
-      display: block;
-      float: none;
-      width: unset;
-    }
-  }
-}
+// Sidebar-hamburger hybrid
 
-.hamburger-panel {
-  span.badge-category {
-    max-width: unset;
-  }
-  .menu-panel {
-    width: 240px !important;
-    li {
-      /* These are Admin and Settings, but also individual results from 
-      the Search Menu */
-      padding: 0px 24px 0px 48px;
-      &:hover {
-        background-color: var(--community-blue);
-        a {
-          color: white !important;
-        }
-        .d-icon, .d-label {
-          color: white !important;
-        }
-      }
-      a.widget-link {
-        color: var(--modal-fg);
-        overflow: visible;
-        padding: 4px 0px;
-        .d-label {
-          font-size: 0.875em;
-        }
-        .d-icon {
-          color: var(--fg-high-contrast);
-          font-size: 12px;
-          padding: 2px;
-          margin-left: -30px;
-          margin-right: 8px;
-        }
-        &:hover,
-        &:focus {
-          background-color: transparent !important;
-        }
-      }
-    }
-  }
-}
+.hamburger-panel .revamped {
+  --d-sidebar-highlight-background: var(--d-hover);
+  --d-sidebar-row-horizontal-padding: 0.5rem;
+  --d-sidebar-row-height: 30px;
+  // 1.25rem gets text left-aligned with the hamburger icon
+  --d-sidebar-row-horizontal-padding: 0.66rem;
+  width: 360px;
 
-/* Search menu */
-.search-menu {
-  input[type="text"] {
-    font-size: 1em;
-    font-weight: 400;
-    margin-bottom: 0px;
-    padding: 8px 8px;
-    height: revert;
+  .panel-body-content {
     width: 100%;
-    &::placeholder {
-      color: var(--fg-medium-contrast);
-    }
+    min-width: 0; // prevent content blowing out width
   }
-  .menu-panel {
-    /* This specialized padding is "fixed" by .results on the
-        bottom of the div */
-    padding: 16px 16px 6px 16px;
-  }
-  .search-context {
-    margin-bottom: 6px;
-    order: 1;
-    padding: 0 0;
-    .d-label {
-      color: var(--fg-medium-contrast);
-      font-size: 0.875em;
-      font-weight: 500;
-      text-decoration: underline;
-      text-transform: capitalize;
-    }
-    & + .results {
-      margin-top: 0;
-    }
-  }
-  .search-input {
-    margin-bottom: 16px;
-    padding: 0 0;
-    order: 2;
-  }
-  .searching {
-    top: 8px !important;
-    right: 8px !important;
-    // these are icons displayed in the right corner of the search bar
-    a.show-advanced-search, a.clear-search { 
-      .d-icon {
-        color: var(--fg-low-contrast);
-      }
-      &:hover {
-        .d-icon {
-          color: var(--fg-high-contrast);
-        }
-      }
-    }
-  }
-  .results {
-    margin-top: 0;
-    order: 3;
-    padding-bottom: 10px;
-    .search-result-topic {
-      width: 100%;
-    }
-    .main-results + .secondary-results {
-      border-left: 1px solid var(--surface-high-contrast);
-      margin-left: 1em;
-      margin-right: 1em;
-      padding-left: 1em;
-      padding-right: 1em;
-    }
-    .extra-hint {
-      color: var(--fg-low-contrast);
-    }
-  }
-  /* Positions the spinner correctly in the middle */
-  .searching {
-    right: 1.25em;
-    top: 1em;
-  }
-}
 
-/* User menu */
-.user-menu {
-  .menu-links-header {
-    border-bottom: 1px solid #dadada;
-    padding-bottom: 4px;
-    margin-bottom: 4px;
-    button {
-      .active {
-        border-bottom: 0;
+  .sidebar-section-wrapper {
+    .sidebar-section-header-button {
+      opacity: 1;
+    }
+
+    .sidebar-section-link.active {
+      font-weight: normal;
+      background: var(--d-hover);
+    }
+
+    .sidebar-section-header-wrapper .select-kit .btn:hover {
+      background: transparent;
+    }
+
+    &.sidebar-section {
+      padding-top: 0.5em;
+      .sidebar-section-header-wrapper {
+        margin: 0 0 0.5em;
+        padding-bottom: 0.25em;
+        border-bottom: 1px solid var(--primary-low);
+        .d-icon-globe {
+          color: var(--primary-medium);
+        }
       }
-      &:hover.active, &:focus.active {
-        background-color: transparent;
+      ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        li {
+          min-width: 0;
+        }
       }
+    }
+
+    .sidebar-section-message {
+      padding: 0;
     }
   }
-  .menu-links-row {
-    .glyphs {
-      button {
-        background: transparent;
-        color: var(--fg-low-contrast);
-        .d-icon {
-          color: var(--fg-low-contrast);
-        }
-        &.active {
-          border: 0px !important;
-          color: var(--fg-high-contrast);
-          .d-icon {
-            color: var(--fg-high-contrast);
-          }
-        }
-        &:hover {
-          background-color: transparent !important;
-          .d-icon {
-            color: var(--fg-high-contrast);
-          }
-        }
-      }
-    }
+
+  .sidebar-section-link-wrapper
+    .sidebar-section-link-hover:hover
+    .sidebar-section-hover-button {
+    background: transparent;
   }
-  .quick-access-panel {
-    border-top: 0;
-    margin-top: 0;
-    padding: 16px 0px 0px 0px;
-    ul {
-      display: block;
-      flex-flow: revert;
-    }
-    li,
-    li:not(.show-all) {
-      background-color: transparent;
-      color: var(--fg-medium-contrast);
-      display: block;
-      font-size: 0.875em;
-      margin-bottom: 4px;
-      padding: 4px 12px;
-      &:hover {
-        background-color: var(--community-blue) !important;
-        color: white !important;
-        cursor: pointer;
-        a, span, .d-icon {
-          color: white !important;
-        }
+
+  .sidebar-footer-wrapper {
+    padding: 0;
+    margin-top: 1em;
+    .sidebar-footer-container {
+      padding: 0;
+      border: none;
+      background: var(--secondary);
+      &:before {
+        top: -1.5em;
+        background: linear-gradient(
+          to bottom,
+          transparent,
+          rgba(var(--secondary-rgb), 1)
+        );
       }
-      &:last-of-type {
-        margin-bottom: 0;
-      }
-      &.is-warning {
-        .d-icon {
-          color: var(--red);
-        }
-      }
-      button {
-        all: unset;
-      }
-      a, button {
-        color: var(--fg-high-contrast);
-        column-gap: 8px;
-        display: inline-grid !important;
-        font-size: 1em;
-        grid-template-columns: 6px 16px 1fr;
-        margin: 0;
-        padding: 0 0;
-        vertical-align: text-bottom;
-        svg {
-          grid-column: 2;
-        }
-        div {
-          grid-column: 3;
-          width: 100%;
-        }
-      }
-      &:not(.read) {
-        background-color: transparent;
-        a:before {
-          @include dot(var(--red), 6px);
-          content: "";
-          display: block;
-          margin-top: 6px;
-        }
-      }
-      span {
-        &:first-child {
-          color: var(--fg-high-contrast);
-          font-weight: 500;
-          &:after {
-            color: inherit;
-            content: "›";
-            display: inline-block;
-            font-weight: 400;
-            margin: 0 0px 0px 4px;
-            opacity: 0.8;
-          }
-        }
-        &:last-child {
-          font-weight: 400;
-          &:after {
-            content: none;
-          }
-        }
-      }
-      .d-icon {
-        align-self: flex-start;
-        color: var(--fg-medium-contrast);
-        font-size: 16px;
-        margin-right: 8px;
-        margin-top: 2px;
-        padding-top: 0;
-      }
-    }
-    .read {
-      background-color: transparent;
-      color: var(--fg-high-contrast);
-      a {
-        color: var(--fg-high-contrast);
-      }
-    }
-  }
-  #quick-access-notifications {
-    li.read {
-      display: none;
     }
   }
 }
 
-#topic-entrance {
-  @include hud-shadow();
-  display: inline-flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  padding: 16px 0;
-  transform: translateY(56px);
-  min-width: 160px;
-  button.btn.jump-bottom {
-    margin: 0 0;
-  }
-  button.full {
-    background-color: transparent;
-    border-radius: 0;
-    color: var(--modal-fg);
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    margin-bottom: 0px;
-    padding: 5px 24px;
-    text-transform: none;
-    transition: color 0s;
-    width: 100%; 
-    &:hover, &:focus {
-      background-color: var(--community-blue);
-      color: var(--bold-fg);
-    }
-    br {
-      display: none;
-    }
-    .d-icon {
-      color: inherit;
-      font-size: 12px;
-      margin: 0px 8px 0px -8px;
-      order: -1;
-      transition: color 0s;
-      width: 12px;
+.sidebar-hamburger-dropdown {
+  .discourse-no-touch & {
+    .sidebar-section-wrapper .sidebar-section-header-wrapper:hover,
+    .sidebar-section-wrapper .sidebar-section-header-wrapper:focus-within {
+      background: transparent;
     }
   }
 }
