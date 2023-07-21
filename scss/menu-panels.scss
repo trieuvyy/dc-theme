@@ -129,11 +129,11 @@ items trigger a dropdown */
     max-width: unset;
   }
   .menu-panel {
-    width: 240px !important;
+    width: 320px !important;
     li {
       /* These are Admin and Settings, but also individual results from 
       the Search Menu */
-      padding: 0px 24px 0px 48px;
+      padding: 0x;
       &:hover {
         background-color: var(--community-blue);
         a {
