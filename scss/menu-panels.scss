@@ -18,153 +18,103 @@ one or two things have been individually configured for these.
 
 /* This is a class Discourse bestows upon your whole page if your menu
 items trigger a dropdown */
-.drop-down-mode {
-  .d-header-icons {
-    .active {
-      .icon {
-        background-color: transparent;
-        cursor: pointer;
-        .d-icon {
-          color: var(--fg-high-contrast);
-        }
-        &:after {
-          content: none;
-          display: none;
-        }
-      }
-    }
-  }
-}
-
 .menu-panel {
-  @include hud-shadow();
-  padding: 8px 0px;
+  &.user-menu.revamped {
+    width: unset;
+  }
 
-  /* This positions where the dropdown appears on desktop relative
-  to where ul.d-header-icons is */
-  &.drop-down {
-    right: 10px;
-    top: 48px !important;
+  .panel-body {
+    max-height: calc(100vh - 100px);
   }
-  b {
-    &.topics-count {
-      display: none;
-    }
+}
+
+// Sidebar-hamburger hybrid
+
+.hamburger-panel .revamped {
+  --d-sidebar-highlight-background: var(--d-hover);
+  --d-sidebar-row-horizontal-padding: 0.5rem;
+  --d-sidebar-row-height: 30px;
+  // 1.25rem gets text left-aligned with the hamburger icon
+  --d-sidebar-row-horizontal-padding: 0.66rem;
+  width: 360px;
+
+  .panel-body-content {
+    width: 100%;
+    min-width: 0; // prevent content blowing out width
   }
-  li {
-    /* These are Latest, Unread, Top, Users, New, Review, etc */
-    a.categories-link {
-      color: var(--modal-fg) !important;
-      font-size: 0.875em;
-      font-weight: 500;
-      padding: 5px 0 !important;
-      &:hover,
-      &:focus {
-        background-color: transparent !important;
-      }
+
+  .sidebar-section-wrapper {
+    .sidebar-section-header-button {
+      opacity: 1;
     }
-    &.category-link {
-      color: var(--modal-fg) !important;
-      font-size: 0.875em;
-      height: 30px;
-      width: 100%;
-      &:hover {
-        background-color: var(--community-blue);
-        a, .badge-category, .category-name, .badge-notification {
-          color: white !important;
+
+    .sidebar-section-link.active {
+      font-weight: normal;
+      background: var(--d-hover);
+    }
+
+    .sidebar-section-header-wrapper .select-kit .btn:hover {
+      background: transparent;
+    }
+
+    &.sidebar-section {
+      padding-top: 0.5em;
+      .sidebar-section-header-wrapper {
+        margin: 0 0 0.5em;
+        padding-bottom: 0.25em;
+        border-bottom: 1px solid var(--primary-low);
+        .d-icon-globe {
+          color: var(--primary-medium);
         }
       }
-      // We want to see the first three categories + the categories links
-      &:nth-of-type(n+5) {
-        display: none;
-      }
-      a {
-        padding: 5px 0px !important;
-        width: 100%;
-      }
-      .badge-category {
-        color: var(--modal-fg);
-      }
-      .badge-category-bg {
-        margin-left: -24px;
-        margin-right: 16px !important; 
-      }
-      .badge-notification {
-        width: unset;
+      ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        li {
+          min-width: 0;
+        }
       }
     }
-  }
-  hr {
-    border-top: 1px solid var(--surface-high-contrast);
-  }
-  ul {
-    padding: 0px 0px;
-  }
-  .panel-body-bottom {
-    padding:0px 8px;
-    .btn {
-      background-color: unset;
-      max-height: 30px;
+
+    .sidebar-section-message {
+      padding: 0;
     }
   }
-  .widget-link, .categories-link {
-    &:hover, &:focus {
-      background-color: transparent;
+
+  .sidebar-section-link-wrapper
+    .sidebar-section-link-hover:hover
+    .sidebar-section-hover-button {
+    background: transparent;
+  }
+
+  .sidebar-footer-wrapper {
+    padding: 0;
+    margin-top: 1em;
+    .sidebar-footer-container {
+      padding: 0;
+      border: none;
+      background: var(--secondary);
+      &:before {
+        top: -1.5em;
+        background: linear-gradient(
+          to bottom,
+          transparent,
+          rgba(var(--secondary-rgb), 1)
+        );
+      }
     }
   }
 }
 
-.menu-links {
-  &.columned {
-    li {
-      display: block;
-      float: none;
-      width: unset;
+.sidebar-hamburger-dropdown {
+  .discourse-no-touch & {
+    .sidebar-section-wrapper .sidebar-section-header-wrapper:hover,
+    .sidebar-section-wrapper .sidebar-section-header-wrapper:focus-within {
+      background: transparent;
     }
   }
 }
 
-.hamburger-panel {
-  span.badge-category {
-    max-width: unset;
-  }
-  .menu-panel {
-    width: 240px !important;
-    li {
-      /* These are Admin and Settings, but also individual results from 
-      the Search Menu */
-      padding: 0px 24px 0px 48px;
-      &:hover {
-        background-color: var(--community-blue);
-        a {
-          color: white !important;
-        }
-        .d-icon, .d-label {
-          color: white !important;
-        }
-      }
-      a.widget-link {
-        color: var(--modal-fg);
-        overflow: visible;
-        padding: 4px 0px;
-        .d-label {
-          font-size: 0.875em;
-        }
-        .d-icon {
-          color: var(--fg-high-contrast);
-          font-size: 12px;
-          padding: 2px;
-          margin-left: -30px;
-          margin-right: 8px;
-        }
-        &:hover,
-        &:focus {
-          background-color: transparent !important;
-        }
-      }
-    }
-  }
-}
 
 /* Search menu */
 .search-menu {
