@@ -2600,3 +2600,13 @@ Badges
 .d-modal.create-account div[class*="user-field-"] {
     display: none;
 }
+
+/* Fix hover Sidebar */
+.sidebar-hamburger-dropdown {
+    .btn.no-text {
+        aspect-ratio: unset;
+    }
+    .sidebar-section-header {
+        background: transparent;
+    }
+}
