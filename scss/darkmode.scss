@@ -140,4 +140,10 @@
 	.btn-social {
     		color: var(--primary);
 	}
+
+	/* Footer links and icons */
+	.footer .footer-links a,
+	.footer .footer-links .social-link {
+	    color: var(--fg-high-contrast);
+	}
 }
