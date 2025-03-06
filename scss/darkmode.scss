@@ -144,6 +144,12 @@
 	/* Footer links and icons */
 	.footer .footer-links a,
 	.footer .footer-links .social-link {
-	    color: var(--fg-high-contrast);
+		color: var(--fg-high-contrast);
+	}
+
+	/* block quote */
+	blockquote {
+		border-left: 5px solid #30363d;
+		background-color: var(--surface-low-contrast);
 	}
 }
