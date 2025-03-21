@@ -905,17 +905,17 @@ section.post-menu-area {
 }
 
 .lightbox-wrapper {
-  margin-left: -5vw;
-  width: 100vw;
-  a.lightbox {
-    flex-direction: column;
-    img:not(.thumbnail):not(.ytp-thumbnail-image):not(.emoji) {
-      height: auto !important;
-      max-height: unset !important;
-      max-width: unset !important;
-      width: 100vw !important;
-    }
-  }
+  // margin-left: -5vw;
+  // width: 100vw;
+  // a.lightbox {
+  //   flex-direction: column;
+  //   img:not(.thumbnail):not(.ytp-thumbnail-image):not(.emoji) {
+  //     height: auto !important;
+  //     max-height: unset !important;
+  //     max-width: unset !important;
+  //     width: 100vw !important;
+  //   }
+  // }
   div.meta {
     // opacity: 1;
     // height: revert;
