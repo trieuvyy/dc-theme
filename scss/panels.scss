@@ -274,7 +274,8 @@ making the # selector valid and extremely precise for this.
   }
 }
 .fk-d-menu__inner-content {
-  border-radius: 12px
+  border-radius: 12px;
+  box-shadow: 0 12px 24px 0px rgba(16, 24, 40, .16) !important;
 }
 .user-card-avatar .avatar-flair .fa, .user-profile-avatar .avatar-flair .fa {
   font-size: unset;
