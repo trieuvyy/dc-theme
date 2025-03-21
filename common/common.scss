@@ -127,19 +127,19 @@ div.ac-wrap {
 }
 
 /* Layout */
-.wrap {
-  max-width: initial;
-  margin: 0 0;
-  padding: 0 0;
-  display: grid;
-  grid-template-columns:
-    1fr
-    unquote("min(90vw, 1200px)")
-    1fr !important;
-  & > * {
-    grid-column: 2 !important;
-  }
-}
+// .wrap {
+//   max-width: initial;
+//   margin: 0 0;
+//   padding: 0 0;
+//   display: grid;
+//   grid-template-columns:
+//     1fr
+//     unquote("min(90vw, 1200px)")
+//     1fr !important;
+//   & > * {
+//     grid-column: 2 !important;
+//   }
+// }
 
 .container.posts > .row {
   overflow: revert;
