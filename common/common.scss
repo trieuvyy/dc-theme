@@ -136,9 +136,9 @@ div.ac-wrap {
     1fr
     unquote("min(90vw, 1200px)")
     1fr !important;
-  & > * {
-    grid-column: 2 !important;
-  }
+  // & > * {
+  //   grid-column: 2 !important;
+  // }
 }
 
 .container.posts > .row {
