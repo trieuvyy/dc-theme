@@ -596,6 +596,12 @@ input[type]:focus,
 }
 
 /* Tags */
+.discourse-tag {
+  background-color: transparent;
+  border-radius: 50px;
+  padding: 1px 8px;
+  border: 1px solid var(--surface-high-contrast);
+}
 .discourse-tags > *{
   align-items: center;
   background-color: transparent;        
@@ -603,10 +609,10 @@ input[type]:focus,
   font-size: 0.875em;
   margin-right: 0.5em;
   &:not(.list-vote-count) {
-    background-color: transparent;
-    border: 1px solid var(--surface-high-contrast);
-    border-radius: 2px;
-    padding: 2px 8px;
+    // background-color: transparent;
+    // border: 1px solid var(--surface-high-contrast);
+    // border-radius: 2px;
+    // padding: 2px 8px;
   }
 }
 
