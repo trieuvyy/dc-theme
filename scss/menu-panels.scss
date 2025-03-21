@@ -37,7 +37,9 @@ items trigger a dropdown */
 }
 
 .menu-panel {
-  @include hud-shadow();
+  // @include hud-shadow();
+  box-shadow: 0 12px 24px 0px rgba(16, 24, 40, .16) !important;
+  border-radius: 12px !important;
   padding: 8px 0px;
 
   /* This positions where the dropdown appears on desktop relative
