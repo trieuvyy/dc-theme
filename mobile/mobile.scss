@@ -905,8 +905,9 @@ section.post-menu-area {
 }
 
 .lightbox-wrapper {
-  margin-left: -5vw;
-  width: 100vw;
+  // margin-left: -5vw;
+  // width: 100vw;
+  display: none;
   a.lightbox {
     flex-direction: column;
     img:not(.thumbnail):not(.ytp-thumbnail-image):not(.emoji) {
