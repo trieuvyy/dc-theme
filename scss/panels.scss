@@ -104,7 +104,10 @@ making the # selector valid and extremely precise for this.
 */
 
 #user-card {
-  @include hud-shadow();
+  // @include hud-shadow();
+  border: .5px solid rgba(0, 0, 0, .1);
+  box-shadow: 0 12px 24px 0px rgba(16, 24, 40, .16) !important;
+  border-radius: 12px !important;
   overflow: hidden;
   /*max-width: 480px;*/
   .card-content {
@@ -270,7 +273,9 @@ making the # selector valid and extremely precise for this.
     }
   }
 }
-
+.fk-d-menu__inner-content {
+  border-radius: 12px
+}
 /* AUTOCOMPLETE */
 
 .autocomplete {
