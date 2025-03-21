@@ -1570,7 +1570,7 @@ div.poll {
 
 .topic-map {
   background-color: transparent;
-  border: 1px solid var(--surface-high-contrast);
+  border: 1px solid var(--surface-high-contrast)!important;
   border-radius: 6px;
   margin: 8px 0 8px 20px;
   max-width: 82vw;
