@@ -1,1 +1,26 @@
 
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const banner = document.getElementById("banner");
+    const closeButton = document.querySelector(".close");
+
+    if (localStorage.getItem("bannerClosed") === "true") {
+        banner.style.display = "none";
+    }
+
+    closeButton.addEventListener("click", function () {
+        banner.style.display = "none";
+        const expiryDate = new Date();
+        expiryDate.setDate(expiryDate.getDate() + 30);
+        localStorage.setItem("bannerClosed", "true");
+        localStorage.setItem("bannerExpiry", expiryDate.getTime());
+    });
+
+    const storedExpiry = localStorage.getItem("bannerExpiry");
+    if (storedExpiry && new Date().getTime() > storedExpiry) {
+        localStorage.removeItem("bannerClosed");
+        localStorage.removeItem("bannerExpiry");
+        banner.style.display = "block"; 
+    }
+});
+</script>
