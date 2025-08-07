@@ -913,6 +913,7 @@ tr {
       align-items: center;
       display: inline-flex;
       font-size: 1em;
+      margin-bottom: 3px;
     }
     .topic-link,
     .topic-statuses > .topic-status {
@@ -1785,6 +1786,7 @@ div.poll {
   }
   .title-wrapper {
     width: 95%;
+    gap: 7px;
   }
   .topic-category {
     color: var(--fg-medium-contrast);
