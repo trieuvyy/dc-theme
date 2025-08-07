@@ -105,3 +105,13 @@ Admin theming
     }
   }
 }
+
+.admin-area {
+  .sidebar-wrapper {
+    .admin-panel {
+      .sidebar-section-header-text {
+        color: var(--community-blue);
+      }
+    }
+  }
+}
