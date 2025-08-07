@@ -2649,13 +2649,21 @@ code {
       }
     }
   }
-
-  // Trường hợp đặc biệt nằm trong .featured-topic-wrapper
   .featured-topic-wrapper & {
     .featured-topic {
       h3 {
         font-size: var(--font-up-1);
       }
+    }
+  }
+}
+
+/* Fix user dropdown menu hover */
+.sidebar-section-link-wrapper {
+  .sidebar-section-link {
+    &:focus-visible,
+    &:hover {
+      background: var(--community-blue);
     }
   }
 }
