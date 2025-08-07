@@ -2620,3 +2620,42 @@ Badges
 code {
     color: #d63384!important;
 }
+
+/* Featured post homepage */
+.featured-topics {
+  align-items: stretch !important;
+
+  .featured-topic {
+    background-color: var(--surface-low-contrast);
+    border-radius: 28px;
+    align-items: start;
+    justify-content: start;
+    justify-content: space-between; // Lưu ý: dòng này sẽ ghi đè dòng trên
+
+    .featured-topic-image {
+      border-top-right-radius: 28px;
+      border-top-left-radius: 28px;
+    }
+
+    h3 {
+      text-align: start;
+
+      a {
+        color: var(--fg-high-contrast);
+      }
+
+      &:hover a {
+        color: var(--tertiary);
+      }
+    }
+  }
+
+  // Trường hợp đặc biệt nằm trong .featured-topic-wrapper
+  .featured-topic-wrapper & {
+    .featured-topic {
+      h3 {
+        font-size: var(--font-up-1);
+      }
+    }
+  }
+}
