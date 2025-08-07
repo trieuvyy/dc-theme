@@ -716,7 +716,7 @@ section.post-menu-area {
   article {
     position: relative;
     &:before {
-      background-color: $primary-low-mid;
+      background-color: var(--surface-high-contrast);
       content: "";
       height: 1px;
       margin-left: -5vw;
