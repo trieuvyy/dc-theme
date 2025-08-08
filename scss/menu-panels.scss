@@ -22,10 +22,10 @@ items trigger a dropdown */
   .d-header-icons {
     .active {
       .icon {
-        background-color: transparent;
+        background-color: var(--community-blue);
         cursor: pointer;
         .d-icon {
-          color: var(--fg-high-contrast);
+          color: var(--surface-low-contrast);
         }
         &:after {
           content: none;
