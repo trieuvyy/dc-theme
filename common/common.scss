@@ -691,7 +691,7 @@ tr {
   }
   th,
   td {
-    padding: 16px 0;
+    padding: 6px 0;
     &:first-of-type {
       padding-left: 0;
     }
@@ -787,11 +787,11 @@ tr {
         padding: 0 0;
       }
       a.title {
-        height: 1.375em;
-        max-width: 88%;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
+        // height: 1.375em;
+        // max-width: 88%;
+        // overflow: hidden;
+        // text-overflow: ellipsis;
+        // white-space: nowrap;
         &:hover {
           position: relative;
           text-decoration: underline;
