@@ -74,6 +74,12 @@
 		
 	}
 
+	.topic-list-item {
+		&.has-excerpt {
+      		background: var(--surface-low-contrast) !important;
+		}
+	}
+
 	/* Select kit */
 	.select-kit {
 	}
