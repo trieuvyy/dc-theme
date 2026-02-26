@@ -746,10 +746,10 @@ tr {
   }
   .topic-list-item {
     &.has-excerpt {
-      /*
+      
       background: var(--surface-low-contrast) !important;
-      border-bottom: 1px solid var(--surface-high-contrast);
-      */
+      //border-bottom: 1px solid var(--surface-high-contrast);
+      
       td.main-link {
         /*
         padding: 24px;
